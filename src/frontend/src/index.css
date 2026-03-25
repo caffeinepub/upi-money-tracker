@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BricolageGrotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Dark fintech palette */
+    --background: 0.07 0 0;
+    --foreground: 0.95 0 0;
+    --card: 0.1 0 0;
+    --card-foreground: 0.95 0 0;
+    --popover: 0.12 0 0;
+    --popover-foreground: 0.95 0 0;
+    --primary: 0.97 0 0;
+    --primary-foreground: 0.1 0 0;
+    --secondary: 0.13 0 0;
+    --secondary-foreground: 0.75 0 0;
+    --muted: 0.15 0 0;
+    --muted-foreground: 0.6 0 0;
+    --accent: 0.2 0 0;
+    --accent-foreground: 0.95 0 0;
+    --destructive: 0.6 0.18 25;
+    --destructive-foreground: 0.95 0 0;
+    --border: 0.22 0 0;
+    --input: 0.22 0 0;
+    --ring: 0.5 0 0;
+    --success: 0.78 0.18 155;
+    --success-foreground: 0.1 0 0;
+    --chart-1: 0.78 0.18 155;
+    --chart-2: 0.6 0.18 25;
+    --chart-3: 0.75 0 0;
+    --chart-4: 0.5 0 0;
+    --chart-5: 0.3 0 0;
+    --sidebar: 0.1 0 0;
+    --sidebar-foreground: 0.95 0 0;
+    --sidebar-primary: 0.97 0 0;
+    --sidebar-primary-foreground: 0.1 0 0;
+    --sidebar-accent: 0.15 0 0;
+    --sidebar-accent-foreground: 0.95 0 0;
+    --sidebar-border: 0.22 0 0;
+    --sidebar-ring: 0.5 0 0;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "ss01", "ss02";
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: oklch(0.1 0 0);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.25 0 0);
+    border-radius: 3px;
+  }
+}
